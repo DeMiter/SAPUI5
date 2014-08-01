@@ -17,7 +17,7 @@ http.createServer(function(request, response) {
     
     var parsedUrl = url.parse(request.url);
     var parsedQuery = qString.parse(parsedUrl.query);
-    var lName = parsedQuery.name;
+    var lName = parsedQuery.name;    
     record = '';
         
     if (parsedUrl.pathname === '/add') {

@@ -13,7 +13,7 @@ sap.ui.jsview("testbutton.myview", {
 	* @memberOf testbutton.myview
 	*/ 
 	createContent : function(oController) {
-		var button = sap.ui.commons.Button('btn1', {text: 'test button'})
+		var button = sap.ui.commons.Button('btn1', {text: 'Changed Button'})
 		return button;
 	}
 

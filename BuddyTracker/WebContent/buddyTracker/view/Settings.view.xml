@@ -1,0 +1,9 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.trident.buddyTracker.view.Settings" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>SettingsTitle}">
+		<content>
+			<Label text="{i18n>WiFiOnly}" />
+			<Switch state="true" id="wiFi" />
+		</content>
+	</Page>
+</core:View>

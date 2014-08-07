@@ -2,15 +2,21 @@
 		controllerName="sap.ui.trident.buddyTracker.controller.Settings" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>SettingsTitle}">
 		<content>
-			<Label text="{i18n>WiFiOnly}" />
-			<Switch state="true" id="wiFi" />
-			<Label text="{i18n>Privacy}" />
-			<Select autoAdjustWidth="true" id="privacy">
-				<core:Item text="{i18n>PrivacyPublic}" key="public" />
-				<core:Item text="{i18n>PrivacyProtected}" key="protected" />
-				<core:Item text="{i18n>PrivacyPrivate}" key="private" />
-			</Select>
-			<Text text="" id="description" />
+			<VBox class="contentBox">
+				<Label text="{i18n>WiFiOnly}" />
+				<Switch state="true" id="wiFi" />
+				<Label text="{i18n>LogFrequency}">
+				<Select id="frequency">
+					<core:Item text="{i18n>}"
+				</Select>
+				<Label text="{i18n>Privacy}" />
+				<Select id="privacy">
+					<core:Item text="{i18n>PrivacyPublic}" key="public" />
+					<core:Item text="{i18n>PrivacyProtected}" key="protected" />
+					<core:Item text="{i18n>PrivacyPrivate}" key="private" />
+				</Select>
+				<Text text="" id="description" />
+			</VBox>
 		</content>
 	</Page>
 </core:View>

@@ -2,12 +2,16 @@
 		controllerName="sap.ui.trident.buddyTracker.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>LoginTitle}" showHeader="false">
 		<content>
-			<Label text="{i18n>UserLabel}" />
-			<Input id="user" type="Text" placeHolder="{i18n>User}" />
-			<Label text="{i18n>Password}" />
-			<Input id="password" type="Password" placeHolder="{i18n>PasswordInput}" />
-			<Button text="{i18n>SignIn}" press="handleSignIn" />
-			<Button text="{i18n>SignUp}" press="handleSignUp" />
+			<VBox class="contentBox">
+				<Label text="{i18n>UserLabel}" />
+				<Input id="user" type="Text" placeHolder="{i18n>User}" />
+				<Label text="{i18n>Password}" />
+				<Input id="password" type="Password" placeHolder="{i18n>PasswordInput}" />
+				<HBox>
+					<Button text="{i18n>SignIn}" press="handleSignIn" />
+					<Button text="{i18n>SignUp}" press="handleSignUp" />
+				</HBox>
+			</VBox>
 		</content>
 	</Page>
 </core:View>

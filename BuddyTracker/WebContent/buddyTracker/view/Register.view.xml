@@ -2,16 +2,20 @@
 		controllerName="sap.ui.trident.buddyTracker.controller.Register" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>RegisterTitle}">
 		<content>
-			<Label text="{i18n>ScreenName}" />
-			<Input id="screenName" type="Text" placeHolder="{i18n>ScreenNameInput}" />
-			<Label text="{i18n>Email}" />
-			<Input id="email" type="Text" placeHolder="{i18n>EmailInput}" />
-			<Label text="{i18n>User}" />
-			<Input id="user" type="Text" placeHolder="{i18n>UserInput}" />
-			<Label text="{i18n>Password}" />
-			<Input id="password" type="Password" placeHolder="{i18n>PasswordInput}" />
-			<Button text="{i18n>SignUp}" press="handleSignUp" />
-			<Button text="{i18n>Cancel}" press="handleCancel" />
+			<VBox class="contentBox">
+				<Label text="{i18n>ScreenName}" />
+				<Input id="screenName" type="Text" placeHolder="{i18n>ScreenNameInput}" />
+				<Label text="{i18n>Email}" />
+				<Input id="email" type="Text" placeHolder="{i18n>EmailInput}" />
+				<Label text="{i18n>User}" />
+				<Input id="user" type="Text" placeHolder="{i18n>UserInput}" />
+				<Label text="{i18n>Password}" />
+				<Input id="password" type="Password" placeHolder="{i18n>PasswordInput}" />
+				<HBox>
+					<Button text="{i18n>SignUp}" press="handleSignUp" />
+					<Button text="{i18n>Cancel}" press="handleCancel" />
+				</HBox>
+			</VBox>
 		</content>
 	</Page>
 </core:View>

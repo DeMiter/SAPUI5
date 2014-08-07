@@ -1,4 +1,4 @@
-sap.ui.controller("sap.ui.trident.buddyTracker.view.App", {
+sap.ui.controller("sap.ui.trident.buddyTracker.controller.App", {
 
 	/**
 	 * Navigates to another page

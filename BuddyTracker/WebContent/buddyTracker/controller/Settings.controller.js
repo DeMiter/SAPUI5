@@ -1,4 +1,4 @@
-sap.ui.controller("sap.ui.trident.buddyTracker.view.Settings", {
+sap.ui.controller("sap.ui.trident.buddyTracker.controller.Settings", {
 
 /**
 * Called when a controller is instantiated and its View controls (if available) are already created.

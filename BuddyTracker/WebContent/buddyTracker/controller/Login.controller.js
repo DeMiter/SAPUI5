@@ -1,4 +1,4 @@
-sap.ui.controller("sap.ui.trident.buddyTracker.view.Login", {
+sap.ui.controller("sap.ui.trident.buddyTracker.controller.Login", {
 
 	handleSignIn: function(evt){
 		var context = evt.getSource().getBindingContext();

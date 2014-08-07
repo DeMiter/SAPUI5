@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-		controllerName="sap.ui.trident.buddyTracker.view.Login" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="{i18n>LoginTitle}">
+		controllerName="sap.ui.trident.buddyTracker.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>LoginTitle}" showHeader="false">
 		<content>
 			<Label text="{i18n>UserLabel}" />
 			<Input id="user" type="Text" placeHolder="{i18n>User}" />

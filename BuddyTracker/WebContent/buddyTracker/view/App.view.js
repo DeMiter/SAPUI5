@@ -1,7 +1,7 @@
 sap.ui.jsview("sap.ui.trident.buddyTracker.view.App", {
 
 	getControllerName: function () {
-		return "sap.ui.trident.buddyTracker.view.App";
+		return "sap.ui.trident.buddyTracker.controller.App";
 	},
 	
 	createContent: function (oController) {

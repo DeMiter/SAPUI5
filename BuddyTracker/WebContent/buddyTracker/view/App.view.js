@@ -7,7 +7,7 @@ sap.ui.jsview("sap.ui.trident.buddyTracker.view.App", {
 	createContent: function (oController) {
 		
 		// to avoid scroll bars on desktop the root view must be set to block display
-		//this.setDisplayBlock(true);
+		this.setDisplayBlock(true);
 		
 		// create app
 		this.app = new sap.m.App();

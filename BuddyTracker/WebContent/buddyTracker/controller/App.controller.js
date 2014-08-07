@@ -14,7 +14,7 @@ sap.ui.controller("sap.ui.trident.buddyTracker.controller.App", {
 		if (app.getPage(pageId, master) === null) {
 			var page = sap.ui.view({
 				id : pageId,
-				viewName : "sap.ui.demo.myFiori.view." + pageId,
+				viewName : "sap.ui.trident.buddyTracker.view." + pageId,
 				type : "XML"
 			});
 			page.getController().nav = this;

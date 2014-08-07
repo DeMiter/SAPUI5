@@ -3,19 +3,26 @@
 	<Page title="{i18n>SettingsTitle}">
 		<content>
 			<VBox class="contentBox">
-				<Label text="{i18n>WiFiOnly}" />
-				<Switch state="true" id="wiFi" />
-				<Label text="{i18n>LogFrequency}" />
-				<Select id="frequency">
-					<core:Item text="{i18n>30seconds}" key="" />
-				</Select>
 				<Label text="{i18n>Privacy}" />
-				<Select id="privacy">
+				<Select id="privacy" change="onPrivacyChange" selectedKey="protected">
 					<core:Item text="{i18n>PrivacyPublic}" key="public" />
 					<core:Item text="{i18n>PrivacyProtected}" key="protected" />
 					<core:Item text="{i18n>PrivacyPrivate}" key="private" />
 				</Select>
-				<Text text="" id="description" />
+				<Text text="{i18n>PrivacyProtectedText}" id="description" />
+				<Label text="{i18n>WiFiOnly}" />
+				<Switch state="true" id="wiFi" />
+				<Label text="{i18n>LogFrequency}" />
+				<Select id="frequency" selectedKey="60">
+					<core:Item text="{i18n>30seconds}" key="30" />
+					<core:Item text="{i18n>1minute}" key="60" />
+					<core:Item text="{i18n>2minutes}" key="120" />
+					<core:Item text="{i18n>5minutes}" key="300" />
+					<core:Item text="{i18n>10minutes}" key="600" />
+					<core:Item text="{i18n>30minutes}" key="1800" />
+					<core:Item text="{i18n>1hour}" key="3600" />
+				</Select>
+				<Button text="{i18n>Start}" press="handleStart" />
 			</VBox>
 		</content>
 	</Page>

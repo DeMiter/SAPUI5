@@ -6,7 +6,6 @@ sap.ui.controller("sap.ui.trident.buddyTracker.controller.Register", {
 	},
 	
 	handleCancel: function(evt){
-		var context = evt.getSource().getBindingContext();
 		this.nav.back("Login");
 	}
 

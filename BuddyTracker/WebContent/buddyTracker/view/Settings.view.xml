@@ -5,9 +5,9 @@
 			<VBox class="contentBox">
 				<Label text="{i18n>WiFiOnly}" />
 				<Switch state="true" id="wiFi" />
-				<Label text="{i18n>LogFrequency}">
+				<Label text="{i18n>LogFrequency}" />
 				<Select id="frequency">
-					<core:Item text="{i18n>}"
+					<core:Item text="{i18n>30seconds}" key="" />
 				</Select>
 				<Label text="{i18n>Privacy}" />
 				<Select id="privacy">

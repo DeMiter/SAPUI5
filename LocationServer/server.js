@@ -111,17 +111,11 @@ http.createServer(function(request, response) {
     	
     } else { 
 	    response.writeHead(400, {
-	        'Content-Type': 'text/plain',    	      
-	    }); // Unauthorized
+	    	'Content-Type': 'text/plain',
+	    	'Set-Cookie': ['type=nonsence', 'language=javascript']}); // Wrong operation
     	response.write('Wrong operation!');    
-    }    
+    }
     response.end(); //finish processing current request
 }).listen(port);
-
-
-
-function toString() {
-	
-}
 
 console.log('Server is running on port ' + port);

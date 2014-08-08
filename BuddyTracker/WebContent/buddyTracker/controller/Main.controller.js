@@ -14,7 +14,7 @@ sap.ui.controller("sap.ui.trident.buddyTracker.controller.Main", {
 	handleSelectItem: function(evt){
 		var context = evt.getSource().getBindingContext();
 		var item = context.getObject();
-		
+
 		if (item.Group == "false"){
 			this.nav.to("Map", context);
 		} else {

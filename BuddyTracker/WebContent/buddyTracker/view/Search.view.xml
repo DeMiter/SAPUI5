@@ -1,6 +1,6 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 		controllerName="sap.ui.trident.buddyTracker.controller.Search" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="{i18n>SearchTitle}">
+	<Page title="{i18n>SearchTitle}" showNavButton="true" navButtonPress="handleBackNav">
 		<content>
 			<List items="{/AllSearch}">
 				<StandardListItem
@@ -11,9 +11,9 @@
 					iconInset="false" />
 				<swipeContent>
 					<Button
-						text="{i18n>Delete}"
-						type="Reject"
-						press="handleDelete" />
+						text="{i18n>Track}"
+						type="Accept"
+						press="handleStartTrack" />
     			</swipeContent>
 			</List>
 		</content>

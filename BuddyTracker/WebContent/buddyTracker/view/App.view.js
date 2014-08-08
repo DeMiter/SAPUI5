@@ -27,6 +27,11 @@ sap.ui.jsview("sap.ui.trident.buddyTracker.view.App", {
 		settings.getController().nav = this.getController();
 		this.app.addPage(settings, false);
 		
+		// load the main page
+		var main = sap.ui.xmlview("Main", "sap.ui.trident.buddyTracker.view.Main");
+		main.getController().nav = this.getController();
+		this.app.addPage(main, false);
+		
 		// done
 		return this.app;
 	}

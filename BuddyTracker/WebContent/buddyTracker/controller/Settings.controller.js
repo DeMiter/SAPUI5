@@ -1,17 +1,19 @@
 sap.ui.controller("sap.ui.trident.buddyTracker.controller.Settings", {
 
 	onPrivacyChange: function(evt){
-		var frequency = this.getView().byId("frequency").getSelectedKey();
-		var description = this.getView().byId("description");
+		var privacy = this.getView().byId("privacy").getSelectedKey();
 		var oBundle = this.getView().getModel("i18n").getResourceBundle();
+		var text;
 		
-		if (frequency == "public") {
-			description.setText( oBundle.getText("PrivacyPublicText") );
-		} else if (frequency = "protected") {
-			description.setText( oBundle.getText("PrivacyProtectedText") );
-		} else if (frequency = "private") {
-			description.setText( oBundle.getText("PrivacyPrivateText") );
+		if (privacy == "public") {
+			text = oBundle.getText("PrivacyPublicText");
+		} else if (privacy == "protected") {
+			text = oBundle.getText("PrivacyProtectedText");
+		} else if (privacy == "private") {
+			text = oBundle.getText("PrivacyPrivateText");
 		}
+		
+		this.getView().byId("description").prop("text", text);
 	},
 	
 	handleStart: function(evt){

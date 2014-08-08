@@ -1,0 +1,136 @@
+{
+	"AllCollection": [
+		{	
+			"Id": "1001",
+			"Name": "Elsy Mena",
+			"Group": "false",
+			"Description": "Working from home",
+			"StatusCode": "100",
+			"Status": "No molestar, por favor!",
+			"PictureUrl": "https://profiles.wdf.sap.corp/avatar/I824563"
+		},
+		{
+			"Id": "1002",
+			"Name": "Jesus Garcia",
+			"Group": "false",
+			"Description": "Nice!",
+			"StatusCode": "2",
+			"Status": "",
+			"PictureUrl": "sap-icon://person-placeholder"
+		},
+		{
+			"Id": "1003",
+			"Name": "Justin Woo",
+			"Group": "false",
+			"Description": "Have a great day!",
+			"StatusCode": "3",
+			"Status": "",
+			"PictureUrl": "sap-icon://person-placeholder"
+		},
+		{
+			"Id": "1004",
+			"Name": "Dario Pavletic",
+			"Group": "false",
+			"Description": "OOO",
+			"StatusCode": "1",
+			"Status": "",
+			"PictureUrl": "sap-icon://person-placeholder"
+		},
+		{
+			"Id": "2001",
+			"Name": "CRM Interaction Center",
+			"Group": "true",
+			"Description": "Montreal team",
+			"StatusCode": "",
+			"Status": "",
+			"PictureUrl": "sap-icon://group",
+			"People": [
+				{
+					"Id": "1006",
+					"Name": "Scott Ingram",
+					"Group": "false",
+					"Description": "",
+					"StatusCode": "1",
+					"Status": "",
+					"PictureUrl": "sap-icon://person-placeholder"	
+				},
+				{
+					"Id": "1002",
+					"Name": "Jesus Garcia",
+					"Group": "false",
+					"Description": "Nice!",
+					"StatusCode": "2",
+					"Status": "",
+					"PictureUrl": "sap-icon://person-placeholder"	
+				}
+			]
+		},
+		{
+			"Id": "2003",
+			"Name": "Trident",
+			"Group": "true",
+			"Description": "Learning SAPUI5 mobile",
+			"StatusCode": "",
+			"Status": "",
+			"PictureUrl": "sap-icon://group",
+			"People": [
+				{
+					"Id": "1010",
+					"Name": "Dimiter Dimitrov",
+					"Group": "false",
+					"Description": "Exploring mobile apps",
+					"StatusCode": "1",
+					"Status": "",
+					"PictureUrl": "sap-icon://person-placeholder"	
+				},
+				{
+					"Id": "1011",
+					"Name": "John Jiang",
+					"Group": "false",
+					"Description": "Cool Mc.Cool",
+					"StatusCode": "2",
+					"Status": "",
+					"PictureUrl": "sap-icon://person-placeholder"	
+				},
+				{
+					"Id": "1012",
+					"Name": "Christian Montoya",
+					"Group": "false",
+					"Description": "",
+					"StatusCode": "1",
+					"Status": "",
+					"PictureUrl": "https://profiles.wdf.sap.corp/avatar/I826914"	
+				}
+			]
+		},
+		{
+			"Id": "2004",
+			"Name": "CRM Framework",
+			"Group": "true",
+			"Description": "En travaillant avec la fine pointe de la technologie",
+			"StatusCode": "",
+			"Status": "",
+			"PictureUrl": "sap-icon://group",
+			"People": [
+				{
+					"Id": "1023",
+					"Name": "Sevan Koryan",
+					"Group": "false",
+					"Description": "",
+					"StatusCode": "3",
+					"Status": "",
+					"PictureUrl": "sap-icon://person-placeholder"	
+				},
+				{
+					"Id": "1011",
+					"Name": "John Jiang",
+					"Group": "false",
+					"Description": "Cool Mc.Cool",
+					"StatusCode": "2",
+					"Status": "",
+					"PictureUrl": "sap-icon://person-placeholder"	
+				}
+			]
+		}
+	]
+}

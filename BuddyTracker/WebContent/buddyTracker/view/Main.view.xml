@@ -1,8 +1,30 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
 		controllerName="sap.ui.trident.buddyTracker.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page title="Title">
+	<Page title="{i18n>MainTitle}">
+		<headerContent>
+			<Button icon="sap-icon://add-contact" press="handleAddContact" />
+		</headerContent>
+		<subHeader>
+			<Toolbar>
+				<SearchField />
+			</Toolbar>
+		</subHeader>
 		<content>
-	
+			<List items="{/AllCollection}">
+				<StandardListItem
+					title="{Name}"
+					description="{Description}"
+					icon="{PictureUrl}"
+					iconDensityAware="false"
+					iconInset="false"
+					type="Navigation" />
+				<swipeContent>
+					<Button
+						text="{i18n>Delete}"
+						type="Reject"
+						press="handleDelete" />
+    			</swipeContent>
+			</List>
 		</content>
 	</Page>
 </core:View>

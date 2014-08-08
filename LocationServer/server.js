@@ -10,7 +10,7 @@ var db = {"people": [
     {"name": "Peter", "word": "welcome", "status": "active", "privacy": "public", "latitude": "45.496508", "longitude": "-73.556062", "altitude": "0"},
   ]		
 }; 
-var template = '"Name": "", "Word": "", "Status": "inactive", "Privacy": "public", "Latitude": "0", "Longitude": "0", "Altitude": "0"';
+
 var found = 0; 
 
 function findRecord (s) {
@@ -68,8 +68,8 @@ http.createServer(function(request, response) {
     	} else {
     		data = db.people;    		    		
     		var ind = data.length;
-    		 
-    		data[ind] = JSON.parse(template);    	
+    				    	
+    		data[ind] = {"name": "", "word": "", "status": "active", "privacy": "public", "latitude": "0", "longitude": "0", "altitude": "0"};
     		data[ind].name = parsedQuery.name;
     		data[ind].word = parsedQuery.p;
     		response.writeHead(200, {
@@ -119,3 +119,8 @@ http.createServer(function(request, response) {
 }).listen(port);
 
 console.log('Server is running on port ' + port);
+console.log('Possible commands:');
+console.log('/login?name<Name>=&p=<Password>');
+console.log('/search?name=<Name>');
+console.log('/update?name=<Name>&p=<password>&latitude=<latitude>&longitude=<longitude>&altitude=<altitude>');
+console.log('/signin?name<Name>=&p=<Password>');

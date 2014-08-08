@@ -10,5 +10,10 @@ sap.ui.controller("sap.ui.trident.buddyTracker.controller.Main", {
 	    oList.removeAggregation("items", oList.getSwipedItem());
 	    oList.swipeOut();
 	},
+	
+	handleSelectItem: function(evt){
+		debugger;
+		var item = evt.getParameter("selectedItem").getKey();
+	},
 
 });

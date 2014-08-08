@@ -2,7 +2,20 @@
 		controllerName="sap.ui.trident.buddyTracker.controller.Search" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>SearchTitle}">
 		<content>
-			
+			<List items="{/AllSearch}">
+				<StandardListItem
+					title="{Name}"
+					description="{Description}"
+					icon="sap-icon://person-placeholder"
+					iconDensityAware="false"
+					iconInset="false" />
+				<swipeContent>
+					<Button
+						text="{i18n>Delete}"
+						type="Reject"
+						press="handleDelete" />
+    			</swipeContent>
+			</List>
 		</content>
 	</Page>
 </core:View>

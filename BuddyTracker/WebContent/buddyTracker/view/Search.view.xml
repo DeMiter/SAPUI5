@@ -2,7 +2,7 @@
 		controllerName="sap.ui.trident.buddyTracker.controller.Search" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="{i18n>SearchTitle}">
 		<content>
-	
+			
 		</content>
 	</Page>
 </core:View>

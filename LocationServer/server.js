@@ -4,19 +4,27 @@ var qString = require('querystring');
 
 var port = 2727;
 var data = [];
-var pName = "Name";
-var pPass = "Word";
-var pStatus = "Status";
-var pPrivacy = "Privacy";
-var pLatitude = "Latitude";
-var pLongitude = "Longitude";
-var pAltitude = "Altitude";
+
 var db = {"people": [
-    {pName: "John", pPass: "welcome", pStatus: "active", pPrivacy: "public", pLatitude: "0", pLongitude: "0", pAltitude: "0"},
+    {"name": "John", "word": "welcome", "status": "active", "privacy": "public", "latitude": "39.882528", "longitude": "116.514189", "altitude": "0"},
+    {"name": "Peter", "word": "welcome", "status": "active", "privacy": "public", "latitude": "45.496508", "longitude": "-73.556062", "altitude": "0"},
   ]		
 }; 
-var template = {pName: "", pPass: "", pStatus: "inactive", pPrivacy: "public", pLatitude: "0", pLongitude: "0", pAltitude: "0"};
+var template = '"Name": "", "Word": "", "Status": "inactive", "Privacy": "public", "Latitude": "0", "Longitude": "0", "Altitude": "0"';
 var found = 0; 
+
+function findRecord (s) {
+	var found = -1;	
+	var data = db.people;
+	var i = 0;
+	for (i = 0 ; i < data.length; i++) {
+		if (data[i].name === s) {			
+			found = i;
+			break;
+		}
+	}
+	return found;
+};
 
 http.createServer(function(request, response) {
 
@@ -38,7 +46,7 @@ http.createServer(function(request, response) {
     	    }); // Unauthorized
     	    response.write("User or password are wrong!")    		
     	} else {
-    		if(db.people[found].pPass === parsedQuery.p) {
+    		if(db.people[found].word === parsedQuery.p) {
     			response.writeHead(200, {
     				'Content-Type': 'text/plain',    	      
     			}); //return success header
@@ -62,13 +70,45 @@ http.createServer(function(request, response) {
     		var ind = data.length;
     		 
     		data[ind] = JSON.parse(template);    	
-    		data[ind].pName = parsedUrl.name;
-    		data[ind].pPass = parsedUrl.p;
+    		data[ind].name = parsedQuery.name;
+    		data[ind].word = parsedQuery.p;
     		response.writeHead(200, {
 			'Content-Type': 'text/plain',    	      
 		}); //return success header
 		response.write("User : " + parsedQuery.name + " registered!")
     	}
+    } else if (parsedUrl.pathname === '/search') {
+    	found = findRecord(parsedQuery.name);
+    	if (found === -1) {
+    	    response.writeHead(400, {
+    	        'Content-Type': 'text/plain',    	      
+    	    }); // No data!
+    	    response.write("No data!")    		
+    		
+    	} else {
+    	    response.writeHead(200, {
+    	        'Content-Type': 'text/plain',    	      
+    	    }); // Found
+    	    data = db.people[found];
+    	    response.write(JSON.stringify(data));  		
+    		
+    	}
+    } else if (parsedUrl.pathname === '/update') {
+    	
+    	found = findRecord(parsedQuery.name);
+    	if (found === -1) {
+    		response.writeHead(400, {'Content-Type': 'text/plain',});
+    		response.write("User does not exist!");
+    	} else {
+    		data = db.people[found];
+    		data.latitude = parsedQuery.latitude;
+    		data.longitude = parsedQuery.longitude;
+    		data.altitude = parsedQuery.altitude;
+    		response.writeHead(200, {'Content-Type': 'text/plain',});
+    		response.write("Updated!" + JSON.stringify(data));
+
+    	}
+    	
     } else { 
 	    response.writeHead(400, {
 	        'Content-Type': 'text/plain',    	      
@@ -78,16 +118,10 @@ http.createServer(function(request, response) {
     response.end(); //finish processing current request
 }).listen(port);
 
-function findRecord (s) {
-	var found = -1;	
-	var data = db.people;	
-	for (i = 0 ; i < data.length; i++) {
-		if (data[i].pName === s) {			
-			found = i;
-			break;
-		}
-	}
-	return found;
-};
+
+
+function toString() {
+	
+}
 
 console.log('Server is running on port ' + port);

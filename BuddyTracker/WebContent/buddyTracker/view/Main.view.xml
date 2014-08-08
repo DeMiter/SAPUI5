@@ -10,7 +10,7 @@
 			</Toolbar>
 		</subHeader>
 		<content>
-			<List items="{/AllCollection}">
+			<List items="{/AllCollection}" >
 				<StandardListItem
 					title="{Name}"
 					description="{Description}"
